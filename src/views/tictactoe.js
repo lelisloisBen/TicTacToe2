@@ -2,17 +2,26 @@ import React from 'react';
 
 const Tic = () => {
 
-    const title = React.createElement('h1', {}, 'My First React Code');
+    const num = 9;
+    const random = Math.random();
+    // const container = React.createElement('div', {className: "square col-4", id: "12", key: random }, "X");
 
-    const paragraph = React.createElement('p', {}, 'Writing some more HTML. Cool stuff!');
-    const container = React.createElement('div', {className: "brown", id: "12" }, [title, paragraph]);
+    let divid = [];
+    for (let i=0; i<num; i++) {
+        divid.push(
+            React.createElement('div', {className: "square col-4", id: "12", key: (i*random) }, "X")
+        );
+    }
 
     return (
         <>
-        <h1>Hellooooo</h1>
-        {title}
+        <h1 className="text-center" >Tic Tac Toe</h1>
         <br/>
-        {container}
+            <div className="container">
+                <div className="row">
+                    {divid}
+                </div>
+            </div>
         </>
     );
 };
