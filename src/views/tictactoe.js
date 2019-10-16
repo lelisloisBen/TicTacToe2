@@ -17,6 +17,7 @@ const Tic = () => {
         let val = Number(e.target.value);
         console.log(val);
         setNum(val);
+        console.log(divid);
     }
 
     let containerWith = (Math.ceil(Math.sqrt(num))) * 200;
