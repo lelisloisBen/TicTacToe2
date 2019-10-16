@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Tic = () => {
 
-    // const [playXO, setPlayXO] = useState('');
+    const [playXO, setPlayXO] = useState('X');
 
     const clickMe = (e) => {
-        // (playXO === "X") ? setPlayXO("O") : setPlayXO("X");
+        (playXO === "X") ? setPlayXO("O") : setPlayXO("X");
         let divID = e.target.id;
-        document.getElementById(divID).innerHTML = "X";
-
+        document.getElementById(divID).innerHTML = playXO;
+        console.log(divID);
     }
 
     const num = 9;
